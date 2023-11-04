@@ -1,0 +1,407 @@
+.App{
+  height: 100vh;
+  position: relative;
+}
+
+/* Header */
+
+.header{
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  height: 40px;
+  justify-content: space-between;
+  margin-bottom: 1px;
+  position: relative;
+}
+
+.logo{
+  width: 35px;
+  height: 35px;
+}
+
+.logo img{
+  width: 100%;
+  height: 100%;
+}
+
+.nav-items{
+  flex: 1;
+}
+
+.nav-items ul li{
+  display: inline-block;
+  margin: 0px 10px;
+}
+
+.nav-items ul li{
+  /* position: relative; */
+}
+
+.nav-items ul li a.active::after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 70px;
+  bottom: 0%;
+  background-color: black;
+  height: 2px;
+}
+
+.nav-items ul li a{
+  text-decoration: none;
+  color: rgb(128, 128, 128);
+  font-weight: 300;
+}
+
+.nav-icons{
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+}
+
+.nav-icons svg{
+  padding: 5px;
+  color:rgb(128, 128, 128);
+}
+
+.nav-icons svg:hover{
+  background-color: rgba(203, 203, 203, 0.245);
+  border-radius: 5px;
+}
+
+.w-6{
+  width: 20px;
+}
+
+.h-6{
+  height: 20px;
+}
+
+.premium{
+  border: none;
+  border-radius: 10px;
+  padding: 5px 13px;
+  color: orange;
+  font-weight: bold;
+  background-color: rgba(255, 166, 0, 0.12);
+  font-family: 'Cedarville Cursive', cursive;
+  transition: all 100ms linear;
+}
+
+.premium:hover{
+  background-color: rgba(255, 166, 0, 0.22);
+  cursor: pointer;
+}
+
+.problem-section{
+  display: flex;
+  flex-direction: column;
+}
+
+.problem{
+  display: flex;
+  background-color: rgba(206, 206, 206, 0.135);
+  flex: 1;
+  height: calc(100vh - 51px);
+}
+
+.problem-info-section{
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  resize:horizontal;
+  min-width: 550px;
+}
+
+
+.problem-info-header ul li{
+  display: inline-block;
+  padding: 10px 35px;
+  position: relative;
+}
+
+
+.problem-info-header ul li a::after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 1px;
+  background-color: rgba(206, 206, 206, 0.47);
+  height: 40%;
+  bottom: 30%;
+  left: -1%;
+}
+
+.problem-info-header ul li.active{
+  background-color: white;
+  border-right: 1px solid rgba(206, 206, 206, 0.47);
+  border-left: 1px solid rgba(206, 206, 206, 0.47);
+  border-bottom: 1px solid white;
+}
+
+.problem-info-header ul li a{
+  color: black;
+  text-decoration: none;
+  font-weight: 200;
+  font-size: small;
+}
+
+.problem-info-header ul li{
+  /* width: 100%; */
+}
+
+.problem-description{
+  border: 1px solid rgba(206, 206, 206, 0.47);
+  margin-top: -1px;
+  background-color: white;
+  overflow-y: scroll;
+  padding: 15px;
+  flex: 1;
+ 
+}
+
+.problem-description::-webkit-scrollbar {
+  width: 5px;
+}
+
+.problem-description::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.problem-description::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.problem-description{
+  -ms-overflow-style: none;
+  scrollbar-width:none;
+}
+
+.problem-name{
+  font-weight:500;
+}
+
+.problem-header{
+  display: flex;
+  align-items: center;
+  font-weight: 200;
+  gap: 10px;
+  font-size: small;
+  color: gray;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(206, 206, 206, 0.47);
+}
+
+.problem-story{
+  background-color: white;
+  padding: 15px 0;
+  font-weight: 300;
+  font-size: small;
+
+}
+
+.problem-footer-left, .problem-footer-right{
+  padding: 10px 15px;
+  background-color: white;
+}
+
+.problem-footer-left{
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  /* justify-content: space-between; */
+}
+
+.problem-footer-right{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.problem-footer-right > .left{
+  display: flex;
+  gap: 15px;
+  font-weight: 100;
+  font-size: small;
+  color: rgb(82, 127, 137);
+  padding: 5px 8px;
+  position: relative;
+  font-family: sans-serif;
+}
+
+.problem-footer-right > .right{
+  display: flex;
+  gap: 15px;
+}
+
+.submit{
+  padding: 8px 20px;
+  background-color: rgba(0, 19, 24, 0.787);
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.run-code{
+  border:1px solid gray;
+  padding: 5px 10px;
+  width: 130px;
+  border-radius: 3px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.problem-footer-left > .left{
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.problem-footer-left > .right{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-btn{
+   padding: 8px;
+   background-color: #eaeaea35;
+   border: 1px solid rgba(152, 154, 154, 0.552);
+   border-radius: 2px;
+   color:rgba(43, 66, 71, 0.793);
+   cursor: pointer;
+}
+
+.Easy{
+  color: green;
+}
+
+.Hard{
+  color:red;
+}
+
+.Medium{
+  color: orange;
+}
+/* scroll bar color #6a6a6a27 */
+.resize-handle--x{
+  width: 15px;
+  height: 100%;
+  background-color: transparent;
+  cursor: ew-resize;
+  transition: background-color 100ms linear 300ms;
+}
+
+.resize-handle--x:hover{
+  background-color: #47738b3e;
+}
+
+
+.editor-section{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.editor{
+  
+  /* min-width: 300px; */
+  flex: 1;
+  border: 1px solid rgba(206, 206, 206, 0.47);
+  height: 100vh;
+  font-size: 13px;
+}
+
+.editor-header{
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.editor-header-left{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.editor-header-right{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: 10px;
+}
+
+.editor-header-right svg{
+  color:rgb(82, 127, 137);
+}
+
+.svg{
+  fill:rgb(82, 127, 137);
+}
+.svg:hover{
+ fill: black;
+}
+
+.editor-header-right svg:hover{
+  color: black;
+  cursor: pointer;
+  
+}
+
+
+.autocomplete{
+  font-weight: 100;
+  font-size: small;
+  color: rgb(82, 127, 137);
+  padding: 5px 8px;
+  position: relative;
+  font-family: sans-serif;
+}
+
+.autocomplete:hover{
+  background-color: #3977881e;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.autocomplete::after{
+  transition: all 200ms ease-in-out 200ms;
+}
+
+.autocomplete:hover::after{
+   content: 'Provides intelligent code completion based on language and an analysis of your source code.';
+   position: absolute;
+   display: block;
+   background-color: rgba(0, 0, 0, 0.783);
+   top: 140%;
+   padding: 10px;
+   color: white;
+   width: 250px;
+   border-radius: 2px;
+   z-index: 100;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+.home{
+  /* height: calc(100vh - 51px);  */
+  background-color: blueviolet;
+}
+
+.code-mirror{
+  overflow-y: scroll;
+  /* height: 100px; */
+  height: 80vh;
+ 
+}
+
+#language{
+  padding: 5px;
+  border: 1px solid gray;
+  outline: 0;
+  border-radius: 3px;
+}
